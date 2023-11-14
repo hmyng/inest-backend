@@ -1,0 +1,11 @@
+fastapi==0.61.2
+pydantic[email]
+python-decouple==3.3
+uvicorn==0.11.8
+pymongo[srv]==3.11.0
+python-dotenv==0.19.2
+numpy
+starlette
+logger
+fastapi_utils
+pandas
