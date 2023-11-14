@@ -1,0 +1,10 @@
+fastapi==0.61.2
+motor==2.2.0
+pydantic[email]
+python-decouple==3.3
+uvicorn==0.11.8
+numpy
+starlette
+logger
+fastapi_utils
+pandas
