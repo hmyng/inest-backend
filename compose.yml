@@ -1,0 +1,20 @@
+version: "3.5"
+
+services:
+  backend:
+    image: "inest-backend:latest"
+    ports: 
+      - 9998:9998
+    env_file:
+      - ../inest-backend/.env
+    volumes: 
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    networks:
+      - backend
+
+networks:
+  backend:
+    # Use a custom driver
+    driver: bridge

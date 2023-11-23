@@ -2,13 +2,13 @@ from server.database.mongo import data_collection
 import pandas as pd
 import math
 
-async def get_data(per_page: int=20, page: int=1, from_date="2021-01-01", to_date="2024-12-31", device_id: int=1):
+async def get_data(per_page: int=20, page: int=1, from_date="2021-01-01", to_date="2024-12-31", device_id: str='C10_301'):
     data = data_collection.find(
         {"TheTime": {
         '$gte': from_date,
         '$lte': to_date,
-        }}
-        # {"device_id": device_id}
+        },
+        "device_id": device_id}
     )
     data_response = []
     for i in data:
